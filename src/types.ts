@@ -1,10 +1,10 @@
 
 export type DudaLink = {
-  href: string,
-  raw_url: string,
-  rel: string,
-  target: string,
-  type: string,
+  href?: string,
+  raw_url?: string,
+  rel?: string,
+  target?: string,
+  type?: string,
 }
 
 export type Plan = {
