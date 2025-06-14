@@ -23,21 +23,21 @@
                 <v-tabs align-tabs="center" hide-slider class="mt-1">
                   <v-tab variant="text">
                     <div>
-                      <h3 class="text-h6">{{ plan.typicalDownload }}Mbps</h3>
+                      <h3 class="text-h6 speedVal">{{ plan.typicalDownload }}Mbps</h3>
                       <div class="text-caption">download</div>
                     </div>
                   </v-tab>
                   <v-divider vertical thickness="3"></v-divider>
                   <v-tab variant="text">
                     <div>
-                      <h3 class="text-h6">{{ plan.typicalUpload }}Mbps</h3>
+                      <h3 class="text-h6 speedVal">{{ plan.typicalUpload }}Mbps</h3>
                       <div class="text-caption">upload</div>
                     </div>
                   </v-tab>
                 </v-tabs>
               </v-card-text>
 
-              <v-card-text class="selector text-center pt-0 pb-1">
+              <v-card-text class="selector text-center pt-0 pb-1" style="height: 20px">
                 <v-btn class="mb-n6" rounded color="success" v-bind="plan.link">
                   {{ plan.linkText }} <v-icon class="ml-1">mdi-arrow-right-circle</v-icon>
                 </v-btn>
@@ -128,6 +128,7 @@
 
     .name,
     .speed,
+    .speedVal,
     .price,
     .selector {
       background-color: rgba(38, 9, 107, 1);
