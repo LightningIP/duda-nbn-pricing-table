@@ -49,7 +49,7 @@
                 <v-list-item class="text-left prevent-select" prepend-icon="mdi-information" dense :style="refPlanDescriptionStyle">
                   <div ref="planDescription" >
                     <v-list-item-title class="text-body-2" style="white-space: normal;">What is {{ plan.name }}?</v-list-item-title>
-                    <div class="text-caption">{{ plan.description }}</div>
+                    <div class="text-caption" v-html="plan.description"></div>
                   </div>
                 </v-list-item>
 

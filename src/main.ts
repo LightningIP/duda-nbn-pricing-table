@@ -34,7 +34,7 @@ init({ container: '#app', props: {
       typicalDownload: 25,
       typicalUpload: 10,
 
-      description: 'A low-cost plan suitable for light users who mainly browse the web and check emails.',
+      description: 'A <b>low-cost</b> plan suitable for light users who mainly browse the web and check emails.',
 
       techFTTP: true,
       techHFC: true,
