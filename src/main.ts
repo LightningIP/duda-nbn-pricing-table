@@ -44,7 +44,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link: { href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
 
     },
@@ -66,7 +66,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link: { href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
 
     },
@@ -88,7 +88,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link:{ href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
 
     },
@@ -109,7 +109,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link: { href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
 
     },
@@ -130,7 +130,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link: { href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
     },
     {
@@ -150,7 +150,7 @@ init({ container: '#app', props: {
       techFW: false,
       techSat: false,
 
-      link: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10',
+      link: { href: 'https://bolt.lip.net.au/signup?wantedPlan=nbn-25-10' },
       linkText: 'Get Started',
     },
   ],

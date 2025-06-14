@@ -1,4 +1,12 @@
 
+export type DudaLink = {
+  href: string,
+  raw_url: string,
+  rel: string,
+  target: string,
+  type: string,
+}
+
 export type Plan = {
   name: string,
   monthly: number,
@@ -16,7 +24,7 @@ export type Plan = {
   techFW: boolean,
   techSat: boolean,
 
-  link: string,
+  link: DudaLink,
   linkText: string,
 
 }

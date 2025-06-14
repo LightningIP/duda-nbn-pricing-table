@@ -38,7 +38,7 @@
               </v-card-text>
 
               <v-card-text class="selector text-center pt-0 pb-1">
-                <v-btn class="mb-n6" rounded color="success" :href="plan.link">
+                <v-btn class="mb-n6" rounded color="success" v-bind="plan.link">
                   {{ plan.linkText }} <v-icon class="ml-1">mdi-arrow-right-circle</v-icon>
                 </v-btn>
               </v-card-text>
