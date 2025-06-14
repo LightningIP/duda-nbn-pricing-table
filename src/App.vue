@@ -189,7 +189,16 @@
 
 
   const breakpoints = computed(() => {
-    return {
+
+    return props.breakpoints?.reduce((acc, bp) => ({
+      ...acc,
+      [bp.break]: {
+        itemsToShow: bp.itemsToShow,
+        itemsToScroll: bp.itemsToScroll,
+      }
+    }), {});
+
+    /*return {
       0: {
         itemsToShow: 1.2,
         itemsToScroll: 1,
@@ -217,7 +226,7 @@
         itemsToShow: 4.2,
         itemsToScroll: 4,
       },
-    };
+    };*/
   });
 
   const refPlanDescriptions = useTemplateRef<HTMLDivElement[]>('planDescription');

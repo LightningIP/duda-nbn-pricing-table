@@ -21,7 +21,14 @@ export type Plan = {
 
 }
 
+export type Breakpoint = {
+  break: number,
+  itemsToShow: number,
+  itemsToScroll: number,
+}
+
 export type AppProps = {
   plans: Plan[],
   typicalSpeedType: 'evening' | 'business',
+  breakpoints: Breakpoint[],
 }
