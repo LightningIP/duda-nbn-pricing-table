@@ -143,8 +143,8 @@
     .speed,
     .price,
     .selector {
-      background-color: rgba(0, 168, 150, 1);
-      color: white;
+      background-color: rgba(0, 168, 150, 1) !important;
+      color: white !important;
     }
   }
 }
