@@ -135,14 +135,14 @@
     .speedVal,
     .price,
     .selector {
-      background-color: rgba(38, 9, 107, 1);
-      color: white;
+      background-color: rgba(38, 9, 107, 1) !important;
+      color: white !important;
     }
   }
 
   .green {
     border: 1px solid rgba(0, 168, 150, 1);
-
+    
     .name,
     .speed,
     .price,
