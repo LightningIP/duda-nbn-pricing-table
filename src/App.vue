@@ -6,7 +6,7 @@
         class="planselector" ref="planSelector">
 
         <slide v-for="(plan, idx) in filteredPlans" :key="idx" style="align-self: start">
-          <template #default="{ isActive, isVisible, currentIndex }">
+          <template #default="{ currentIndex }">
             <v-card class="prevent-select mb-10 w-100 purple text-center" @click="goToSlide(currentIndex)">
 
               <v-card-title class="name pt-5 pb-0">{{ plan.name }}</v-card-title>
@@ -151,21 +151,19 @@
 
 <script setup lang="ts">
   import 'vue3-carousel/carousel.css'
-  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-  import { ref, watch, computed, useTemplateRef, watchEffect } from 'vue';
+  import { Carousel, Slide, Pagination } from 'vue3-carousel';
+  import { computed, useTemplateRef } from 'vue';
   import { AppProps, Plan } from './types';
   import { useElementScrollHeight } from './composables/useElementScrollHeight';
 
 
   const props = defineProps<AppProps>();
-  const theCarousel = useTemplateRef('theCarousel');
+  const planSelector = useTemplateRef('planSelector');
 
   const filteredPlans = computed(() => props.plans.map((plan: Plan) => {
 
     const allFixedLineTech = plan.techFTTP && plan.techHFC && plan.techFTTC && plan.techFTTN && plan.techFTTB;
 
-    const techTypes = [
-    ]
 
     return {
       ...plan,
@@ -178,14 +176,14 @@
         plan.techFTTN ? 'FTTC' : '',
         plan.techFTTB ? 'FTTC' : '',
         plan.techFW ? 'FWA' : '',
-        plan.techSAT ? 'SAT' : ''
+        plan.techSat ? 'SAT' : ''
       ].filter(Boolean).join(', '),
     }
   }));
 
   const goToSlide =  (index: number) => {
-    if (theCarousel.value) {
-      theCarousel.value.goToSlide(index);
+    if (planSelector.value) {
+      //planSelector.value.goToSlide(index);
     }
   };
 
@@ -222,7 +220,7 @@
     };
   });
 
-  const refPlanDescriptions = useTemplateRef('planDescription');
+  const refPlanDescriptions = useTemplateRef<HTMLDivElement[]>('planDescription');
   const refPlanDescriptionScrollHeights = computed(() => {
     return refPlanDescriptions.value
       ? refPlanDescriptions.value.map((el: any) => useElementScrollHeight(el).scrollHeight.value)
@@ -233,7 +231,7 @@
     minHeight: Math.ceil(Math.max(...refPlanDescriptionScrollHeights.value)+15) + 'px',
   }));
 
-  const refPlanTechnologies = useTemplateRef('planTechnology');
+  const refPlanTechnologies = useTemplateRef<HTMLDivElement[]>('planTechnology');
   const refPlanTechnologyScrollHeights = computed(() => {
     return refPlanTechnologies.value
       ? refPlanTechnologies.value.map((el: any) => useElementScrollHeight(el).scrollHeight.value)
