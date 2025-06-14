@@ -178,10 +178,10 @@
         plan.techFTTP ? 'FTTP' : '',
         plan.techHFC ? 'HFC' : '',
         plan.techFTTC ? 'FTTC' : '',
-        plan.techFTTN ? 'FTTC' : '',
-        plan.techFTTB ? 'FTTC' : '',
-        plan.techFW ? 'FWA' : '',
-        plan.techSat ? 'SAT' : ''
+        plan.techFTTN ? 'FTTN' : '',
+        plan.techFTTB ? 'FTTB' : '',
+        plan.techFW ? 'Fixed Wireless' : '',
+        plan.techSat ? 'SkyMuster Plus' : ''
       ].filter(Boolean).join(', '),
     }
   }));
