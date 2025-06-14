@@ -20,7 +20,7 @@
                 <div class="time" v-if="typicalSpeedType == 'business'">Typical Evening Speed (8am-5pm)</div>
                 <div class="time" v-else>Typical Evening Speed (7pm-11pm)</div>
 
-                <v-tabs align-tabs="center" hide-slider class="mt-1">
+                <v-tabs align-tabs="center" hide-slider class="mt-1" :show-arrows="false">
                   <v-tab variant="text">
                     <div>
                       <h3 class="text-h6 speedVal">{{ plan.typicalDownload }}Mbps</h3>
@@ -60,6 +60,10 @@
                   </div>
                 </v-list-item>
               </v-list>
+
+              <v-card-text class="text-caption">
+                <div>Minimum cost ${{ plan.monthly }} on a 1-month plan.</div>
+              </v-card-text>
 
             </v-card>
           </template>

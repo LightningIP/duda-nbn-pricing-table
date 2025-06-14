@@ -156,6 +156,6 @@ init({ container: '#app', props: {
   ],
   typicalSpeedType: 'evening',
   breakpoints: [
-    { break: 0, itemsToShow: 1.2, itemsToScroll: 1 },
+    { break: 0, itemsToShow: 5, itemsToScroll: 1 },
   ]
 } });
